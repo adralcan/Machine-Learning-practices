@@ -292,7 +292,7 @@ explicar qué hace cada parte del código empezando por la parte de
 vectorización.
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{random}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{random}
         \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
         \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{lines} \PY{k}{as} \PY{n+nn}{mlines}
@@ -303,7 +303,8 @@ vectorización.
             \PY{k}{return} \PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{;}
         
         \PY{k}{def} \PY{n+nf}{createPoints}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{)}\PY{p}{:}
-                \PY{c+c1}{\PYZsh{}Ajustamos la altura de la representación de los puntos en Y para que no se salgan de los valores de la gráfica}
+                \PY{c+c1}{\PYZsh{}Ajustamos la altura de la representación de los puntos en Y}
+                \PY{c+c1}{\PYZsh{}para que no se salgan de los valores de la gráfica}
                 \PY{n}{alt} \PY{o}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n}{fun}\PY{p}{(}\PY{n}{M}\PY{p}{)}\PY{p}{)}
                 \PY{n}{size} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{M}\PY{p}{)}
                 \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{n}{a}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{b}\PY{o}{+}\PY{l+m+mf}{0.1}\PY{p}{)} 
@@ -320,7 +321,8 @@ vectorización.
                 \PY{n}{M}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{createFunction}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{num\PYZus{}puntos}\PY{p}{)}  
                 \PY{n}{valor}\PY{p}{,} \PY{n}{puntos} \PY{o}{=} \PY{n}{createPoints}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{)}
                 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Porcentaje: }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{valor}\PY{p}{)}\PY{p}{)}
-                \PY{c+c1}{\PYZsh{}Pintamos la función por último sino se queda detrás de todos los puntos}
+                \PY{c+c1}{\PYZsh{}Pintamos la función por último sino se queda detrás}
+                \PY{c+c1}{\PYZsh{}de todos los puntos}
                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{M}\PY{p}{,} \PY{n}{puntos}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}       
                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{)}
                 \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
@@ -330,7 +332,7 @@ vectorización.
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-Porcentaje: 36.352608374159225
+Porcentaje: 36.32469260021906
 
     \end{Verbatim}
 
@@ -364,7 +366,8 @@ ella.
 
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor} }]:} \PY{k}{def} \PY{n+nf}{createPoints}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{)}\PY{p}{:}
-                \PY{c+c1}{\PYZsh{}Ajustamos la altura de la representación de los puntos en Y para que no se salgan de los valores de la gráfica}
+                \PY{c+c1}{\PYZsh{}Ajustamos la altura de la representación de los puntos en Y}
+                \PY{c+c1}{\PYZsh{}para que no se salgan de los valores de la gráfica}
                 \PY{n}{alt} \PY{o}{=} \PY{n+nb}{max}\PY{p}{(}\PY{n}{fun}\PY{p}{(}\PY{n}{M}\PY{p}{)}\PY{p}{)}
                 \PY{n}{size} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{M}\PY{p}{)}
                 \PY{n}{plt}\PY{o}{.}\PY{n}{xlim}\PY{p}{(}\PY{n}{a}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{b}\PY{o}{+}\PY{l+m+mf}{0.1}\PY{p}{)} 
@@ -399,22 +402,24 @@ los puntos que cumplen (Y \textless{} puntos) y devuelve ese número
 entre el total en porcentaje.
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}1}]:} \PY{k}{def} \PY{n+nf}{integra\PYZus{}mc}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{num\PYZus{}puntos}\PY{o}{=}\PY{l+m+mi}{10000}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k}{def} \PY{n+nf}{integra\PYZus{}mc1}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{num\PYZus{}puntos}\PY{o}{=}\PY{l+m+mi}{10000}\PY{p}{)}\PY{p}{:}
                 \PY{n}{M}\PY{p}{,} \PY{n}{Y} \PY{o}{=} \PY{n}{createFunction}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{num\PYZus{}puntos}\PY{p}{)}  
                 \PY{n}{valor}\PY{p}{,} \PY{n}{puntos} \PY{o}{=} \PY{n}{createPoints}\PY{p}{(}\PY{n}{fun}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{)}
                 \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Porcentaje: }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{valor}\PY{p}{)}\PY{p}{)}
-                \PY{c+c1}{\PYZsh{}Pintamos la función por último sino se queda detrás de todos los puntos}
+                \PY{c+c1}{\PYZsh{}Pintamos la función por último sino se queda detrás }
+                \PY{c+c1}{\PYZsh{}de todos los puntos}
                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{M}\PY{p}{,} \PY{n}{puntos}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}       
                 \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{M}\PY{p}{,} \PY{n}{Y}\PY{p}{)}
                 \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
 
-    Por último, la función "integra\_mc" crea la función de MonteCarlo y
+    Por último, la función "integra\_mc1" crea la función de MonteCarlo y
 forma todos los puntos aleatorios. Finalmente, muestra el Porcentaje,
 pinta los puntos y finalmente la función (está hecho en este orden ya
 que al ser 10.000 puntos la función no se visualiza debajo de todos los
-puntos).
+puntos). Diferenciamos "integra\_mc1" de "integra\_mc2" aunque hagan
+prácticamente lo mismo para calcular el tiempo de ejecución.
 
 Al terminar, obtenemos la siguiente gráfica:
 
